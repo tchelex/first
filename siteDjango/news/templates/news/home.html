@@ -1,0 +1,21 @@
+{%extends 'news/main.html'%}     <!--#добавляем все что в main.html-->
+
+{%block main_section%}          <!--#формируем блок main_section-->
+    <h2>Список учеников</h2>
+
+<table>
+  {% for post in students %}
+  <tr>
+    <td><P1>{{post.surname}}</P1></td>
+    <td><p1>{{post.name}}</p1></td>
+    <td><p1>{{post.text}}</p1></td>
+    {%if post.section%}
+        <td><p>{{post.section}}</p></td>
+    {%else%}
+        <td><p>неопределено</p></td>
+    {%endif%}
+    <td><p>{{post.date}}</p></td>
+  </tr>
+  {% endfor %}
+</table>
+{%endblock%}

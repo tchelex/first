@@ -1,0 +1,15 @@
+{%extends 'news/main.html'%}     <!--#добавляем все что в main.html-->
+
+{%block main_section%}          <!--#формируем блок main_section-->
+    <h2>Вторая страница</h2>
+    {% for post in students1 %}
+        <h1>{{post.surname}}</h1>
+        <p>{{post.name}}</p>
+        {%if post.section%}
+            <p>{{post.section}}</p>
+        {%else%}
+            <p>неопределено</p>
+        {%endif%}
+    {% endfor %}
+
+{%endblock%}
