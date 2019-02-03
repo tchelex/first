@@ -26,6 +26,7 @@ SECRET_KEY = 'hjhl)-m#)$e*hbkl8!rr&sci=^s2bd(0y%^3&$xq4l*czep0&q'
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    'tchelex.pythonanywhere.com'
 ]
 
 
